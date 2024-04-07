@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+/* Chat.css */
+
+.chat-container {
+  display: flex;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.user-count {
+  margin-bottom: 20px;
+}
+
+.start-conversation-btn {
+  width: 200px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.start-conversation-btn:hover {
+  background-color: #0056b3;
+}
+
+.main-panel {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.main-panel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for messages */
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sent{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sent .message-text {
+  background-color: #82da3f; /* Light green background for sent messages */
+  padding: 10px;
+  border-radius: 10px 10px 0 10px; /* Rounded corners on top left, top right, and bottom left */
+}
+
+.message-text {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message-input-container {
+  position: fixed;
+  margin-top: 20px;
+  bottom: 0;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.send-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .message-input-container {
+    margin-top: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leave-conversation-btn {
+  background-color: #ff6347; /* Coral color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.leave-conversation-btn:hover {
+  background-color: #ff4735; /* Darker coral color on hover */
+}
+
+.not-connected-message {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100%; /* Take up full height of main panel */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
