@@ -6,7 +6,7 @@ import UsersList from "./components/UsersList";
 import YesNo from "./components/YesNo";
 import ErrorPopup from "./components/ErrorPopup";
 import { createDiffieHellman } from 'crypto-browserify';
-import CryptoJS, { AES } from "crypto-js";
+import CryptoJS from "crypto-js";
 
 function App() {
   
