@@ -100,7 +100,7 @@ function App() {
   
   const initiateConnection = (name)=>{
     setName(name);
-    const socket = io('https://chat-app-with-end-to-end-encryption-backend.vercel.app/', { transports: ['websocket', 'polling', 'flashsocket'] });
+    const socket = io('https://chat-app-with-end-to-end-encryption-backend-axom5787n.vercel.app/', { transports: ['websocket', 'polling', 'flashsocket'] });
     socket.on('connect',()=>{
       setSocket(socket)
       
